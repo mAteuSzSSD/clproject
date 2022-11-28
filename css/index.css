@@ -4,10 +4,11 @@
 }
 
 body {
-  background-image: url("/img/bg.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   color: white;
+  font-family: sans-serif;
 }
 
 nav {
@@ -28,6 +29,7 @@ nav ul li {
   list-style: none;
   font-size: 30px;
   border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   padding: 5px;
 }
 nav ul li a {
@@ -39,6 +41,7 @@ main {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  padding-bottom: 20px;
 }
 main .left {
   margin-top: 2vh;
@@ -58,14 +61,19 @@ main .left .block header {
   align-items: center;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  font-size: 25px;
+  text-align: center;
 }
 main .left .block ul {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: rgb(20, 123, 197);
   list-style: none;
+}
+main .left .block ul li {
+  font-size: 18px;
+  padding: 3px;
 }
 main section {
   width: 95%;
@@ -78,13 +86,18 @@ main .right .information {
 }
 main .right .information header {
   background-color: rgb(12, 60, 124);
-  height: 30vh;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 20px;
   padding: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+main .right .information header p {
+  margin-top: 5px;
 }
 main .right .information article {
   background-color: rgb(20, 123, 197);
@@ -92,6 +105,8 @@ main .right .information article {
   flex-direction: column-reverse;
   align-items: center;
   padding: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 main .right .information article div {
   display: flex;
@@ -101,12 +116,30 @@ main .right .information article div {
 main .right .information article div p {
   width: 90%;
   font-size: 21px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .right .information article div p a {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  margin-top: 30px;
+  background-color: rgb(21, 84, 173);
+  padding: 25px;
+  border-radius: 30px;
+}
+main .right .information article div p a:visited {
+  color: white;
 }
 main .right .information article img {
-  width: 45vw;
+  width: 60vw;
+  margin-bottom: 20px;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1000px) {
   body {
     display: flex;
     flex-direction: column;
@@ -131,14 +164,13 @@ main .right .information article img {
   }
   main .left {
     margin-top: 0;
-    width: 250px;
+    width: 300px;
   }
   main .right {
     margin-top: 0;
   }
-  main .right .information header {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  main .right .information {
+    padding-right: 0;
   }
   main .right .information article {
     border-bottom-left-radius: 15px;
@@ -146,5 +178,13 @@ main .right .information article img {
   }
   main .right .information article img {
     width: 300px;
+  }
+}
+@media screen and (min-width: 1350px) {
+  nav {
+    width: 1200px;
+  }
+  main {
+    width: 1200px;
   }
 }/*# sourceMappingURL=index.css.map */
