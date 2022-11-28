@@ -22,7 +22,8 @@ nav {
         flex-direction: column;
         li {
             list-style: none;
-            font-size: 30px;
+            font-size: 30px;                border-top-left-radius: 15px;
+
             padding: 5px;
             a {
                 color: white;
@@ -33,6 +34,37 @@ nav {
 }
 
 main {
+    
+    .left {
+        margin-top: 2vh;
+        width: 250px;
+        .block {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            header {
+                background-color: colors.$left-background-up;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+
+            }
+            ul {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: colors.$left-and-right-background-down;
+                list-style: none;
+            }
+        }
+    }
+
+
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -70,6 +102,56 @@ main {
                 }
                 img {
                     width: 45vw;
+                }
+            }
+        }
+    }
+}
+
+
+// media queries ----------------
+
+
+@media screen and (min-width: 950px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        width: 90%;
+        margin-top: 20px;
+        border-radius: 20px;
+        ul {
+            flex-direction: row;
+            li {
+                padding: 20px;
+            }
+        }
+    }
+
+    main {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        .left {
+            margin-top: 0;
+            width: 250px;
+        }
+        .right {
+            margin-top: 0;
+            .information {
+                header {
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;;
+                }
+                article {
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    img {
+                        width: 300px;
+                    }
                 }
             }
         }

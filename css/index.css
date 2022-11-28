@@ -27,6 +27,7 @@ nav ul {
 nav ul li {
   list-style: none;
   font-size: 30px;
+  border-top-left-radius: 15px;
   padding: 5px;
 }
 nav ul li a {
@@ -38,6 +39,33 @@ main {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+}
+main .left {
+  margin-top: 2vh;
+  width: 250px;
+}
+main .left .block {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+main .left .block header {
+  background-color: rgb(26, 88, 151);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+main .left .block ul {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(20, 123, 197);
+  list-style: none;
 }
 main section {
   width: 95%;
@@ -76,4 +104,47 @@ main .right .information article div p {
 }
 main .right .information article img {
   width: 45vw;
+}
+
+@media screen and (min-width: 950px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    width: 90%;
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+  nav ul {
+    flex-direction: row;
+  }
+  nav ul li {
+    padding: 20px;
+  }
+  main {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  main .left {
+    margin-top: 0;
+    width: 250px;
+  }
+  main .right {
+    margin-top: 0;
+  }
+  main .right .information header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  main .right .information article {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  main .right .information article img {
+    width: 300px;
+  }
 }/*# sourceMappingURL=index.css.map */
