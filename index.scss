@@ -194,5 +194,14 @@ main {
     }
     main {
         width: 1200px;
+        .right {
+            .information {
+                article {
+                    flex-direction: row;
+                }
+            }
+        }
     }
+
+    
 }

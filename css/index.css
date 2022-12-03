@@ -187,4 +187,7 @@ main .right .information article img {
   main {
     width: 1200px;
   }
+  main .right .information article {
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=index.css.map */
